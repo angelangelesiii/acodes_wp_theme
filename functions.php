@@ -105,7 +105,21 @@ add_action( 'widgets_init', 'acodes_widgets_init' );
  * Enqueue scripts and styles.
  */
 function acodes_scripts() {
+
+	// ===== ENQUEUE STYLES =====
+
 	wp_enqueue_style( 'acodes-style', get_stylesheet_uri() );
+
+	// FontAwesome
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/css/fa/css/font-awesome.min.css' );
+
+	// Main CSS
+	wp_enqueue_style( 'acodes-main', get_template_directory_uri().'/css/acodes-main.css' );
+
+	// Front Page only 
+	if (is_front_page()) wp_enqueue_style( 'acodes-front', get_template_directory_uri().'/css/acodes-front.css' );
+
+	// ===== ENQUEUE SCRIPT =====
 
 	wp_enqueue_script( 'acodes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -114,6 +128,32 @@ function acodes_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// JQuery (FOOTER)
+	wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+    wp_enqueue_script( 'jquery' );
+
+    // GSAP
+	wp_enqueue_script( 'GSAP', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', false, false, true);
+
+	// ImagesLoaded
+	wp_enqueue_script( 'ImagesLoaded', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js', false, false, true);
+
+	// ScrollMagic
+	wp_enqueue_script( 'scrollmagic-main', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', false, false, true);
+	wp_enqueue_script( 'scrollmagic-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', false, false, true);
+	wp_enqueue_script( 'scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', false, false, true);
+
+	// anchorScroll
+	wp_enqueue_script( 'anchorScroll', get_template_directory_uri().'/js/jquery.anchorScroll.min.js', false, false, true);
+
+	// Main Script
+	wp_enqueue_script( 'acodes-main', get_template_directory_uri().'/js/acodes-main.js', false, false, true);
+
+	// Front Page Only
+	if (is_front_page()) wp_enqueue_script( 'acodes-front', get_template_directory_uri().'/js/acodes-front.js', false, false, true);
+	
 }
 add_action( 'wp_enqueue_scripts', 'acodes_scripts' );
 
