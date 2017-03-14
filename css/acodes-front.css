@@ -1,0 +1,36 @@
+/*
+ (C) 2017 ACODES Architectural Services and Zimit Media Team
+ Design by Zimit Media
+
+ FRONT PAGE STYLESHEET
+*/
+
+/*===========================================*/
+/*   BANNER SECTIOn                          */
+/*===========================================*/
+
+#banner-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.banner-section {
+	background: #2E2E2E;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+.banner-logo {
+	height: 600px;
+}
+.banner-section .container {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}

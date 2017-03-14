@@ -1,0 +1,67 @@
+/*
+ (C) 2017 ACODES Architectural Services and Zimit Media Team
+ Design by Zimit Media
+
+ MAIN STYLESHEET
+*/
+
+
+/*===========================================*/
+/*   STRUCTURE                               */
+/*===========================================*/
+
+body {
+
+}
+body.site-overflow {
+	overflow: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+a:link,
+a:visited {
+	color: #F45B69;
+	text-decoration: none;
+}
+a:hover {
+	color: #F4838D;
+}
+
+a.edit-link {
+	display: inline-block;
+	background: #C5C5C5;
+	color: #FFFFFF;
+	padding: 10px 15px;
+	line-height: 1em;
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+a.edit-link:hover {
+	background: #BE4F4F;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper-big {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.hidden {
+	display: none;
+}

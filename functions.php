@@ -153,6 +153,8 @@ function acodes_scripts() {
 
 	// Front Page Only
 	if (is_front_page()) wp_enqueue_script( 'acodes-front', get_template_directory_uri().'/js/acodes-front.js', false, false, true);
+	if (is_front_page()) wp_enqueue_script( 'Stats', '//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js', false, false, true);
+	if (is_front_page()) wp_enqueue_script( 'constellation', get_template_directory_uri().'/js/constellation.js', false, false, true);
 	
 }
 add_action( 'wp_enqueue_scripts', 'acodes_scripts' );
