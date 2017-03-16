@@ -43,8 +43,8 @@
 					},
 					width: window.innerWidth,
 					height: window.innerHeight,
-					velocity: 0.05,
-					length: 120,
+					velocity: 0.07,
+					length: 160,
 					distance: 120,
 					radius: 150,
 					stars: []

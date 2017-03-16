@@ -1,0 +1,10 @@
+<div class="column work-item">
+	<a href="<?php the_permalink(); ?>">
+		<?php if(has_post_thumbnail()): ?>
+		<div class="work-container has-thumbnail" style="background: url(<?php echo the_post_thumbnail_url('large') ?>); ">
+		<?php else: ?>
+		<div class="work-container no-thumbnail">
+		<?php endif; ?>
+		</div> <!-- end work-container -->
+	</a>
+</div>

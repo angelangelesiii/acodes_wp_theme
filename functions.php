@@ -113,11 +113,20 @@ function acodes_scripts() {
 	// FontAwesome
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/css/fa/css/font-awesome.min.css' );
 
+	// Google Fonts
+	wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Raleway:200,400,700,900' );
+
+	// Foundation
+	wp_enqueue_style( 'foundation', get_template_directory_uri().'/css/foundation.css' );
+
 	// Main CSS
 	wp_enqueue_style( 'acodes-main', get_template_directory_uri().'/css/acodes-main.css' );
 
 	// Front Page only 
 	if (is_front_page()) wp_enqueue_style( 'acodes-front', get_template_directory_uri().'/css/acodes-front.css' );
+
+	// Hover CSS
+	wp_enqueue_style( 'hover', get_template_directory_uri().'/css/hover-min.css' );
 
 	// ===== ENQUEUE SCRIPT =====
 

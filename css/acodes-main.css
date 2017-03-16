@@ -11,7 +11,9 @@
 /*===========================================*/
 
 body {
-
+	background: #2E2E2E;
+	font-family: 'Raleway', sans-serif;
+	color: #FFFFFF;
 }
 body.site-overflow {
 	overflow: hidden;
@@ -64,4 +66,27 @@ a.edit-link:hover {
 
 .hidden {
 	display: none;
+}
+
+.hvr-underline-from-center:before {
+	background: #FFFFFF !important;
+}
+
+.full-page {
+	height: 100vh;
+	width: 100%;
+}
+
+/*===========================================*/
+/*   WORK                                    */
+/*===========================================*/
+
+.work-container {
+	padding-bottom: 75%;
+	background-size: cover !important;
+	background-position: center center !important;
+	margin: 15px 0;
+}
+.work-container.no-thumbnail {
+	background-color: #A95353;
 }
