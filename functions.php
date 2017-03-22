@@ -122,6 +122,9 @@ function acodes_scripts() {
 	// Main CSS
 	wp_enqueue_style( 'acodes-main', get_template_directory_uri().'/css/acodes-main.css' );
 
+	// FullPageCSS
+	if (is_front_page()) wp_enqueue_style( 'fullpage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css' );
+
 	// Front Page only 
 	if (is_front_page()) wp_enqueue_style( 'acodes-front', get_template_directory_uri().'/css/acodes-front.css' );
 
@@ -154,6 +157,9 @@ function acodes_scripts() {
 	wp_enqueue_script( 'scrollmagic-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', false, false, true);
 	wp_enqueue_script( 'scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', false, false, true);
 
+	// FullPageJS
+	if (is_front_page()) wp_enqueue_script( 'fullpage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js', false, false, true);
+
 	// anchorScroll
 	wp_enqueue_script( 'anchorScroll', get_template_directory_uri().'/js/jquery.anchorScroll.min.js', false, false, true);
 
@@ -171,22 +177,7 @@ add_action( 'wp_enqueue_scripts', 'acodes_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
